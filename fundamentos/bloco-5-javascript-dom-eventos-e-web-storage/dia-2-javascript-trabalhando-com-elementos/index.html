@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+      //1)  
+      let corpo = document.getElementsByTagName('body')[0];
+      let titulo = document.createElement('h1');
+      titulo.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      corpo.appendChild(titulo);
+      //2)
+      let meio = document.createElement('main');
+      meio.className = 'main-content';
+      corpo.appendChild(meio);
+      //3)
+      let secao = document.createElement('section');
+      secao.className = 'center-content';
+      meio.appendChild(secao);
+      //4)
+      let p = document.createElement('p');
+      p.innerHTML = 'isoaiosioiosiaosiao';
+      secao.appendChild(p);
+      //5)
+      let secaoL = document.createElement('section');
+      secaoL.className = 'left-content';
+      meio.appendChild(secaoL);
+      //6)
+      let secaoR = document.createElement('section');
+      secaoR.className = 'right-content';
+      meio.appendChild(secaoR);
+      //7)
+      let img = document.createElement('img');
+      img.className = 'small-image';
+      img.src = 'https://picsum.photos/200';
+      secaoL.appendChild(img);
+      //8)
+      let lista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      let ul = document.createElement('ul');
+      secaoR.appendChild(ul);
+      for (let i = 0; i < lista.length; i += 1){
+          let item = lista[i];
+          let li = document.createElement('li');
+          li.innerHTML = item;
+          ul.appendChild(li);
+      }
+       //9)
+       for (let i = 0; i < 3; i += 1){
+           let h3 = document.createElement('h3');
+           meio.appendChild(h3);
+           h3.className = 'description'; 
+       }
+
+       //1)
+       titulo.className = 'title';
+       
+       //2) esta no 9
+
+       //3)
+       meio.removeChild(secaoL);
+
+       //4) 
+       secaoR.style.marginRight = 'auto';
+
+       //5)
+       secao.parentElement.style.backgroundColor = 'green';
+
+       //6)
+      let filhos = ul.children;
+      ul.removeChild(filhos[9]);
+      ul.removeChild(filhos[8]);
+       
+
+       
+    </script>
+  </body>
+</html>
