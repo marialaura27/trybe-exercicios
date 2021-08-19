@@ -67,11 +67,5 @@ function mudaCorFonte(event){
         localStorage.setItem("family", family);
     }
     meio.style.fontFamily = localStorage.getItem("family");
-
-
-
 }
-
-
-
 
