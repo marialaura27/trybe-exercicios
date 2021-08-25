@@ -1,0 +1,51 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  header p {
+      text-align: center;
+  }
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(165, 213, 214);
+        font-size: 30px;
+        margin: 20px;
+    }
+
+    h1{
+        font-size: 37px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    body {
+        background-color: darksalmon;
+        font-size: 35px;
+        margin: 30px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    header p {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1467px) {
+    body {
+        background-color: rgb(57, 104, 84);
+        font-size: 37px;
+        margin: 35px;
+        max-width: 1300px;
+    }
+}
